@@ -1,0 +1,27 @@
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Beto's News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title size="large">Headlines</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-segment
+              mode="md" 
+              [value]="selectedCat"
+              (ionChange)="segmentChanged($event)" 
+              scrollable="true">
+    <ion-segment-button *ngFor="let item of categories" >
+      <ion-label>{{item}}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <app-articles [articles]="articles"></app-articles>
+</ion-content>

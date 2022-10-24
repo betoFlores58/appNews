@@ -1,0 +1,17 @@
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Beto's News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense" mode="ios" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title size="large">Trending <ion-icon name="trending-up"></ion-icon></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <app-articles [articles]="articles"></app-articles>
+</ion-content>

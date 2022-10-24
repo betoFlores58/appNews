@@ -1,0 +1,15 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>
+      <ion-badge>{{i+1}}</ion-badge>
+      <span> {{item.source.name}}</span>
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-title class="ion-padding-horizontal ion-margin-bottom">
+    {{item.title}}
+  </ion-card-title>
+  <ion-img [src]="item.urlToImage" *ngIf="item.urlToImage"></ion-img>
+  <ion-card-content *ngIf="item.description">
+    <p>{{item.description}}</p>
+  </ion-card-content>
+</ion-card>
